@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="global_spacing_xxxs">4dp</dimen>
+    <dimen name="global_spacing_xxs">8dp</dimen>
+    <dimen name="shopcar_height">65dp</dimen>
+    <dimen name="add_width">75dp</dimen>
+</resources>

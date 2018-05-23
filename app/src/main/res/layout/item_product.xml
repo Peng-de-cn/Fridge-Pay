@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.example.pengzhang.fridgepay.view.main.ProductItem" />
+
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/global_spacing_xxxs"
+        android:clickable="false"
+        android:focusable="false"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/global_spacing_xxxs">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/global_spacing_xxs"
+                app:srcCompat="@{item.icon}" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/global_spacing_xxs"
+                android:layout_toEndOf="@+id/product_image"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Subhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{item.name}"
+                    tools:text="item" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@{item.price}"
+                        tools:text="item" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/global_spacing_xxxs"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/subButton"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="2dp"
+                            android:src="@drawable/yp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="#323232"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/addButton"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="2dp"
+                            android:src="@drawable/yn" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</layout>

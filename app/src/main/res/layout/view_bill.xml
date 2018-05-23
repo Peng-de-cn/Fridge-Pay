@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.pengzhang.fridgepay.view.bill.BillView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bill_mainfl"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/shopcar_height"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom"
+    android:gravity="bottom">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="#454545">
+
+        <LinearLayout
+            android:id="@+id/amount_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="80dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/payButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_pay"
+            android:gravity="center"
+            android:background="@drawable/button_background"
+            android:layout_margin="@dimen/global_spacing_xxxs"
+            android:layout_alignParentEnd="true"
+            android:textColor="@android:color/white"
+            android:enabled="false"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/bill_icon"/>
+</com.example.pengzhang.fridgepay.view.bill.BillView>

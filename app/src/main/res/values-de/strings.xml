@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button_buy">Kaufen</string>
+    <string name="bill_title">Monatliche Abrechnung</string>
+    <string name="bought">Gekauft</string>
+    <string name="button_pay">Bezahlen</string>
+    <string name="dialog_pay_title">Bezahlen</string>
+    <string name="dialog_body_title">Möchten Sie die Abrechnung bezahlen?</string>
+    <string name="notification_pay_title">Bezahlen</string>
+    <string name="notification_body_title">Nicht vergessen die rechnung zu bezahlen</string>
+</resources>

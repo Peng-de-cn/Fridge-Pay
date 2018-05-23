@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.example.pengzhang.fridgepay.view.bill.BoughtProductItem" />
+
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/global_spacing_xxxs"
+        android:clickable="false"
+        android:focusable="false"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/global_spacing_xxxs">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/global_spacing_xxs"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Subhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{item.name}"
+                    tools:text="item" />
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Subhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{item.price}"
+                    tools:text="item" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/global_spacing_xxs"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Subhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/bought"
+                    tools:text="item" />
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Subhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{item.count}"
+                    android:layout_gravity="center"
+                    tools:text="item" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</layout>
